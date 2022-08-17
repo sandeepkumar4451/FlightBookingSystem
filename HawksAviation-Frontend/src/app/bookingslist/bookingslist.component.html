@@ -1,0 +1,49 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h1 style="color:aliceblue">Bookings</h1>
+        <button routerLink="/adminprofile" type="submit" class="btn btn-success btn-lg float-left">Back</button>
+        <!--<div class="d-flex">
+            <button class="btn btn-success">Add Flights</button>
+        </div>-->
+    </div>
+</nav>
+
+<body>
+<div class="mine">
+<table class=" sortable table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">BookingID</th>
+            <th scope="col">FlightNo</th>
+            <th scope="col">CustomerID</th>
+            <th scope="col">Seats</th>
+            <th scope="col">BookingAmount</th>
+            <th scope="col">Arrival</th>
+            <th scope="col">Departure</th>
+            <th scope="col">Status</th>
+            <th scope="col">Options</th>
+        </tr>
+    </thead>
+    <!-- [ngStyle]="{'row-disabled':row.outdated}"-->
+    <tbody *ngFor="let row of bookingsData">
+        <tr> 
+            <td>{{row.bookingID}}</td>
+            <td>{{row.flightNo}}</td>
+            <td>{{row.customerID}}</td>
+            <td>{{row.seats}}</td>
+            <td>{{row.bookingAmount}}</td>
+            <td>{{row.arrival}}</td>
+            <td>{{row.departure}}</td>
+            <td>{{row.status}}</td>
+            <td>
+              <button [disabled]="row.isCancelled || row.isCheckedIn || row.outdated" (click)="updateBookings(row)" style="color:aliceblue;" type="button" class="btn btn-info">Check-in</button>
+              <button [disabled]="row.isCancelled || row.isCheckedIn || row.outdated" (click)="deleteBookings(row)" class="btn btn-danger mx-3">Cancel</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</body>
+
+
+

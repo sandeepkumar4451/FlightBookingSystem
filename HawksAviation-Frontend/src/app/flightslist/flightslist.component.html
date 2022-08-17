@@ -1,0 +1,42 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h3 style="color:aliceblue">Available Flights</h3>
+    </div>
+</nav>
+
+<div class="mine">
+<div class="table mt-3">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">FlightNo</th>
+            <th scope="col">FlightId</th>
+            <th scope="col">Name</th>
+            <th scope="col">Start</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Arrival</th>
+            <th scope="col">Departure</th>
+            <th scope="col">TotalSeats</th>
+            <th scope="col">AvailableSeats</th>
+            <th scope="col">Fare</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of flightList">
+            <td>{{row.flightNo}}</td>
+            <td>{{row.flightId}}</td>
+            <td>{{row.name}}</td>
+            <td>{{row.start}}</td>
+            <td>{{row.destination}}</td>
+            <td>{{row.arrival}}</td>
+            <td>{{row.departure}}</td>
+            <td>{{row.totalSeats}}</td>
+            <td>{{row.availableSeats}}</td>
+            <td>{{row.fare}}</td>
+            <td>
+              <button [disabled]="!row.isActive || row.cancelled || row.outdated" style="color:aliceblue;" type="button" (click)="OnclickBook(row)" class="btn btn-info">Book</button>
+            </td>
+        </tr>
+    </tbody>
+</div>
+</div>

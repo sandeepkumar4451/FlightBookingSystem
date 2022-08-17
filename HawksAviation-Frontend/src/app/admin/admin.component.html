@@ -1,0 +1,84 @@
+<body background="https://www.indiatravelblog.com/attachments/resources/5421-1-Cheap-Flights-to-India-in-December-Month.jpg">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Admin Sign Up</h1>
+                    <h6>Register yourself!!</h6>
+                </div>
+                <div class="container-fluid">
+                  <form [formGroup]="RegisterForm" (ngSubmit)="RegisterAdmin()">
+                    <div *ngIf="invalidLogin" class="alert alert-danger">Invalid username or password.</div>
+                      <div class="form-outline mb-4">
+                          <input type="text" id="firstName" class="form-control" formControlName="firstName"/>
+                          <label class="form-label" for="firstName">FirstName</label>
+                          <div *ngIf="f['firstName'].touched && f['firstName'].invalid" class="alert alert-danger">
+                            <div *ngIf="f['firstName'].errors && f['firstName'].errors['required']">First Name is required.</div>
+                            <div *ngIf="f['firstName'].errors && f['firstName'].errors['minlength']">First Name should be more than 3 character.</div>
+                            <div *ngIf="f['firstName'].errors && f['firstName'].errors['maxlength']">First Name should be less than 50 character.</div>
+                          </div>
+                      </div>
+                
+                      <div class="form-outline mb-4">
+                        <input type="text" id="lastName" class="form-control" formControlName="lastName"/>
+                        <label class="form-label" for="lastName">LastName</label>
+                        <div *ngIf="f['lastName'].touched && f['lastName'].invalid" class="alert alert-danger">
+                          <div *ngIf="f['lastName'].errors && f['lastName'].errors['required']">Last Name is required.</div>
+                          <div *ngIf="f['lastName'].errors && f['lastName'].errors['minlength']">Last Name should be more than 3 character.</div>
+                          <div *ngIf="f['lastName'].errors && f['lastName'].errors['maxlength']">Last Name should be less than 50 character.</div>
+                        </div>
+                      </div>
+  
+                      <div class="form-outline mb-4">
+                          <input type="email" id="emailId" class="form-control" formControlName="emailId"/>
+                          <label class="form-label" for="emailId">EmailId</label>
+                          <div *ngIf="f['emailId'].touched && f['emailId'].invalid" class="alert alert-danger">
+                            <div *ngIf="f['emailId'].errors && f['emailId'].errors['required']">Email is required.</div>
+                            <div *ngIf="f['emailId'].errors && f['emailId'].errors['emailId']">Please, enter valid email address.</div>
+                            <div *ngIf="f['emailId'].errors && f['emailId'].errors['minlength']">Email should be more than 9 character.</div>
+                            <div *ngIf="f['emailId'].errors && f['emailId'].errors['maxlength']">Email should be less than 50 character.</div>
+                          </div>
+                      </div>
+  
+                      <div class="form-outline mb-4">
+                          <input type="text" id="username" class="form-control" formControlName="username"/>
+                          <label class="form-label" for="username">Username</label>
+                          <div *ngIf="f['username'].touched && f['username'].invalid" class="alert alert-danger">
+                            <div *ngIf="f['username'].errors && f['username'].errors['required']">UserName is required.</div>
+                            <div *ngIf="f['username'].errors && f['username'].errors['minlength']">UserName should be more than 6 character.</div>
+                            <div *ngIf="f['username'].errors && f['username'].errors['maxlength']">UserName should be less than 15 character.</div>
+                          </div>
+                        </div>
+                  
+                        <div class="form-outline mb-4">
+                          <input type="password" id="password" class="form-control" formControlName="password"/>
+                          <label class="form-label" for="password">Password</label>
+                          <div *ngIf="f['password'].touched && f['password'].invalid" class="alert alert-danger">
+                            <div *ngIf="f['password'].errors && f['password'].errors['required']">Password is required.</div>
+                            <div *ngIf="f['password'].errors && f['password'].errors['minlength']">Password should be more than 3 character.</div>
+                            <div *ngIf="f['password'].errors && f['password'].errors['maxlength']">Password should be less than 16 character.</div>
+                          </div>
+                        </div>
+                
+                      <div class="form-outline mb-4">
+                          <input type="text" id="role" class="form-control" formControlName="role"/>
+                          <label class="form-label" for="role">Role</label>
+                          <div *ngIf="f['role'].touched && f['role'].invalid" class="alert alert-danger">
+                            <div *ngIf="f['role'].errors && f['role'].errors['required']">Role is required.</div>
+                            <div *ngIf="f['role'].errors && f['role'].errors['minlength']">Role should be more than 5 character.</div>
+                            <div *ngIf="f['role'].errors && f['role'].errors['maxlength']">Role should be less than 20 character.</div>
+                          </div>
+                        </div>
+                
+                      <button type="submit" [disabled]="RegisterForm.invalid" class="btn btn-primary my-1">Submit</button>
+                  </form><br>
+                  <a style="color: rgb(246, 242, 14);" routerLink="/login">Already registered? Click to Login!! </a>
+                  <a style="color: #fff;" routerLink="/adminprofile">Back to Home</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+  </div>
+</body>

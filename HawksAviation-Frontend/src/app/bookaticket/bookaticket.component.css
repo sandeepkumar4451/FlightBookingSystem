@@ -1,0 +1,45 @@
+*
+{
+    padding:0px;
+    margin: 0;
+    font-size: 25px;
+    text-align: center;
+}
+.box
+{
+    background-color:#7894b5;
+    padding: 10px 5 px;
+    border:5px solid #1e4c0c;
+    font-weight: bold;
+    opacity:85%;
+    height: 10cm;
+    width: 15cm;
+    border-radius: 10px;
+    transform:translate(40%,0%);
+}
+
+p
+{
+    background-color: rgba(238, 238, 67, 0.477);
+    height:50px;
+    padding:7px;
+}
+
+.item
+{
+  padding:0px 50px;
+}
+.row
+{
+    padding:10px;
+}
+body
+{
+    background-size:cover;
+    background-repeat: no-repeat;
+    padding: 80px;
+}
+button
+{
+    padding:0px 5px;
+}

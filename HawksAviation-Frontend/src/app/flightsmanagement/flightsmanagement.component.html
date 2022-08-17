@@ -1,0 +1,108 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h3 style="color:aliceblue">Flights</h3>
+        <!--<div class="d-flex">
+            <button class="btn btn-success">Add Flights</button>
+        </div>-->
+        <!-- Button trigger modal -->
+        <button (click)="clickAddFlight()" type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Add Flight Data
+        </button>
+        <button routerLink="/adminprofile" type="submit" class="btn btn-success btn-lg float-left">Back</button>
+    </div>
+</nav>
+<body class="mt-1 mb-5">
+  
+
+<table class="table mt-1 mb-5">
+    <thead>
+        <tr>
+            <th scope="col">FlightNo</th>
+            <th scope="col">FlightId</th>
+            <th scope="col">Name</th>
+            <th scope="col">Start</th>
+            <th scope="col">Destination</th>
+            <th scope="col">Arrival</th>
+            <th scope="col">Departure</th>
+            <th scope="col">TotalSeats</th>
+            <th scope="col">AvailableSeats</th>
+            <th scope="col">Fare</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of flightData">
+            <td>{{row.flightNo}}</td>
+            <td>{{row.flightId}}</td>
+            <td>{{row.name}}</td>
+            <td>{{row.start}}</td>
+            <td>{{row.destination}}</td>
+            <td>{{row.arrival}}</td>
+            <td>{{row.departure}}</td>
+            <td>{{row.totalSeats}}</td>
+            <td>{{row.availableSeats}}</td>
+            <td>{{row.fare}}</td>
+            <td>
+              <button [disabled]= "row.cancelled || row.outdated" (click)="onEdit(row)" style="color:aliceblue;" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info">Edit</button>
+              <button [disabled]= "row.cancelled || row.outdated" (click)="deleteFlight(row)" class="btn btn-danger mx-3">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</body>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Flight Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">FlightId</label>
+            <input type="text" formControlName="flightId" class="form-control" id="exampleInputEmail1">
+          </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Name</label>
+              <input type="text" formControlName="name" class="form-control" id="exampleInputEmail1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Start</label>
+              <input type="text" formControlName="start" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Destination</label>
+                <input type="text" formControlName="destination" class="form-control" id="exampleInputEmail1">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Arrival</label>
+                <input type="datetime-local" formControlName="arrival" class="form-control" id="exampleInputPassword1" value="2018-06-12T19:30">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Departure</label>
+                <input type="datetime-local" formControlName="departure" class="form-control" id="exampleInputEmail1" value="2018-06-12T19:30">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">TotalSeats</label>
+                <input type="number" formControlName="totalSeats" min="500" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">AvailableSeats</label>
+                <input type="number" formControlName="availableSeats" min="1" max="500" class="form-control" id="exampleInputEmail1">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Fare</label>
+                <input type="number" formControlName="fare" required min="0" max="200000" class="form-control" id="exampleInputPassword1">
+              </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" *ngIf="showAdd" (click)="postFlightDetails()" class="btn btn-primary">Add</button>
+        <button type="button" *ngIf="showUpdate" (click)="updateFlight()" class="btn btn-primary">Update</button>
+      </div>
+    </div>
+  </div>
+</div>

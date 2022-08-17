@@ -1,0 +1,81 @@
+<section style="background-color: rgba(176, 226, 237, 0.571);">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card mb-1">
+          <div class="card-body text-center">
+              <img src="https://www.pngmart.com/files/21/Admin-Profile-PNG-Clipart.png" alt="avatar"
+              class="rounded-circle img-fluid" style="width: 150px;">
+
+              <!--<img *ngIf="!IsMale" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava2.webp" alt="avatar"
+              class="rounded-circle img-fluid" style="width: 150px;">
+              -->
+            <h5 class="my-3">{{admin.firstName}} {{admin.lastName}}</h5>
+            <p class="text-muted mb-4">{{user.Role}} {{admin.adminId}}</p>
+            <div class="d-flex justify-content-center mb-2">
+              <button type="button" routerLink="/updateadmin" class="btn btn-primary mr-2">Edit Profile</button>
+              <button type="button" routerLink="/adminpasswordchange" class="btn btn-outline-primary mr-2 ms-1">Change Password</button>
+              <button type="button" routerLink="/registeradmin" class="btn btn-primary mr-2">Register New Admin</button>
+              <button type="button" routerLink="/bookingslist" class="btn btn-outline-primary mr-2 ms-1">List of all Bookings</button>
+              <button type="button" routerLink="/flightmanagement" class="btn btn-primary mr-2">Flights Management</button>
+              <button type="button" routerLink="/addairport" class="btn btn-outline-primary ms-1">Add new Airport</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card mb-1 mt-1">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">First Name</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{admin.firstName}}</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Last Name</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{admin.lastName}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Email</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{admin.emailId}}</p>
+              </div>
+            </div>
+            
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Username</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{admin.username}}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Admin ID</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{admin.adminId}}</p>
+              </div>
+            </div>
+            <br>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+      <!-- <img src="https://st2.depositphotos.com/1071184/7550/v/450/depositphotos_75503103-stock-illustration-business-customer-care-service.jpg" class="rounded img-fluid" style="width: 300px; height: 300;"> -->
+    </div>
+</section>
+<img src="https://thumbs.dreamstime.com/b/vector-airplane-9876484.jpg" class="rounded mx-auto d-block img-fluid" style="width: 1080px;">

@@ -1,0 +1,49 @@
+<Body background="https://wallpapercave.com/wp/wp7634315.jpg">  
+    <div class="box">    
+        <p>Flight Search</p><br>
+<!-- 
+        <label for="fname">Travelling from&nbsp;</label>
+        <input #start type="text" id="fname" name="fname"><br><br>
+         -->
+         <div class="item">
+        <select
+          class="custom-select mb-3"
+          #start
+          (change) = "LIsSame(start.value, destination.value)">
+
+          <option value="">Choose Travelling from City</option>
+          <option *ngFor="let airport of airportList" value={{airport.airportID}}>
+            {{ airport.city }}, {{airport.country}}
+          </option>
+        
+        </select>
+<!--         
+        <label for="lname">Going to &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input #destination type="text" id="lname" name="lname"><br><br>
+         -->
+        <select
+          class="custom-select mb-3"
+            #destination
+            (change) = "LIsSame(start.value, destination.value)">
+            
+          <option value="">Choose Going to City</option>
+          
+          <option *ngFor="let airport of airportList" value={{airport.airportID}} >
+            {{ airport.city }}, {{airport.country}}
+          </option>
+        </select>
+        <div *ngIf="isSame" class="alert alert-danger">
+          Both locations cannot be same, please change any one of the options
+        </div>
+      </div>
+        <label for="doj">Planning on&nbsp;&nbsp;&nbsp;</label>
+        <input #doj type="date" id="doj" name="doj" (change) = "ValidateDate(doj.value)"><br><br>
+        <!-- <div *ngIf="validD" class="alert alert-danger">
+          Invalid Date
+        </div> -->
+        <button type="button" class="btn btn-primary mr-2" routerLink="/home">Back</button>
+        <button (click)="GetflightList(start.value, destination.value, doj.value)" type="submit" class="btn btn-primary my-1">Search</button> 
+    </div>
+    <br>
+    <br>
+</Body>

@@ -1,0 +1,44 @@
+<!-- <body background="https://tse4.mm.bing.net/th?id=OIP.-UwCQae9A4oAZq15M8IlWAHaCe&pid=Api&P=0">
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <img id="line" src="https://www.arenasoftwares.com/images/companies/1/01.jpg?1574318912278" height=40 width=40> 
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav align-items-end">
+          <a class="nav-link" routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"><img src="https://www.pinclipart.com/picdir/big/0-9015_orange-house-cliparts-home-icon-png-orange-transparent.png" height=40 width=40><br>Home</a>
+          <a class="nav-link" *ngIf="!isUserAuthenticated()" routerLink="login" routerLinkActive="active-link"><img src="https://cdn1.iconfinder.com/data/icons/black-easy/512/538303-user_512x512.png" height=40 width=40><br>Login</a>
+          <a class="nav-link" *ngIf="isUserAuthenticated()" routerLink="logout" (click)="logOut()" routerLinkActive="active-link"><img src="https://i.pinimg.com/originals/a8/80/f0/a880f0c919c5bc56cfc73f8f1af56cf4.png" height=40 width=40><br>Logout</a>
+          <a class="nav-link" *ngIf="!isUserAuthenticated()" routerLink="signup" routerLinkActive="active-link"><img src="https://icon-library.com/images/register-icon-png/register-icon-png-0.jpg" height=40 width=40><br>Register</a>
+          <a class="nav-link" routerLink="bookaflight" routerLinkActive="active-link"><img src="https://images.vexels.com/media/users/3/212862/isolated/preview/0846fabe1181b39f8edff657a1ec9a5e-plane-departure-icon-sign-by-vexels.png" height=40 width=40><br>Book Flight</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  </body> -->
+
+  <ul>
+    <nav class="navbar py-0">  
+      <div class="container-fluid">
+        <img routerLink="" style="cursor: pointer;" src="assets/logo.png" height="40" width="250">
+          <div class="d-flex">
+            
+            <figure align="center">
+              <a class="nav-link" routerLink="" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">
+                <img src="https://www.pinclipart.com/picdir/big/0-9015_orange-house-cliparts-home-icon-png-orange-transparent.png" height=20 width=20><figcaption>Home</figcaption></a>
+            </figure>
+            <figure align="center">
+              <a class="nav-link" *ngIf="!isUserAuthenticated()" routerLink="login" routerLinkActive="active-link"><img src="https://cdn1.iconfinder.com/data/icons/black-easy/512/538303-user_512x512.png" height=20 width=20><figcaption>Login</figcaption></a>
+            </figure>
+            <figure align="center">
+              <a class="nav-link" *ngIf="isUserAuthenticated()" routerLink="logout" (click)="logOut()" routerLinkActive="active-link"><img src="https://i.pinimg.com/originals/a8/80/f0/a880f0c919c5bc56cfc73f8f1af56cf4.png" height=20 width=20><figcaption>Logout</figcaption></a>
+            </figure>
+            <figure align="center">
+              <a class="nav-link" *ngIf="!isUserAuthenticated()" routerLink="signup" routerLinkActive="active-link"><img src="https://www.firstview.fi/wp-content/uploads/2019/01/user-plus-1.png" height=20 width=20><figcaption>Register</figcaption></a>
+            </figure>
+            <figure  align="center">
+              <a class="nav-link" routerLink="bookaflight" routerLinkActive="active-link"><img src="https://images.vexels.com/media/users/3/212862/isolated/preview/0846fabe1181b39f8edff657a1ec9a5e-plane-departure-icon-sign-by-vexels.png" height=20 width=20><figcaption>Book Flight</figcaption></a>
+            </figure>
+            
+          </div>
+      </div>
+  </nav>
+    </ul>

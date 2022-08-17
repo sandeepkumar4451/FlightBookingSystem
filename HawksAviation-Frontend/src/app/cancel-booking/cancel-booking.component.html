@@ -1,0 +1,26 @@
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+        <h1 style="color:aliceblue">Cancel Flight</h1>
+    </div>
+  </nav>
+
+<body>
+<div class="card">
+<form class="form-inline">
+    
+    <label class="my-1 mr-2" for="inlineFormInputName2">BookingID: </label>
+    <input #bookingId type="number" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Type BookingId here">
+    <br>
+    <button (click)="CancelBooking(bookingId.value)" type="submit" class="btn btn-primary my-1">Submit</button>
+</form>
+</div>
+</body>
+<!--
+<div *ngIf="" class="alert alert-success" role="alert">
+    Booking Cancelled Successfully!!!!!!!!
+</div>
+
+<div #errbl class="alert alert-danger" role="alert">
+    Booking not Cancelled!!!!!!!
+</div>
+-->

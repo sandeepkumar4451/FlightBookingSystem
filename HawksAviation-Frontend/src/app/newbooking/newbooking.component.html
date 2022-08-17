@@ -1,0 +1,38 @@
+<body>
+  <img src="https://media.istockphoto.com/vectors/map-with-airplanes-flight-travel-in-world-on-plane-route-of-airline-vector-id1271140549">
+<div class="col-md-4 offset-md-5 shadow-lg mb-1 bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                  <h1><marquee>Book Flight</marquee></h1>
+                
+<form>
+<div class="mb-3">
+    <label for="customerid" class="form-label">Customer Id</label>
+    <input #customerID type="number" class="form-control" id="CustomerId" value={{user.UserId}}>
+    <div id="number" class="form-text"></div>
+  </div>
+  <div class="mb-3">
+    <label for="flightno" class="form-label" >FlightNo</label>
+    <input #flightNo type="number" class="form-control" id="FlightNo" value={{flightS.flightNo}}>
+</div>
+  <div class="mb-3">
+    <label for="numberofseats" class="form-label">Number of Seats</label>
+    <input #seats type="number" class="form-control" id="Seats" min="1" (change) = "checkseatsAvailable(seats.value)">
+    <div *ngIf="InvSeats" class="alert alert-danger">
+      select seats less than or equal to {{ASeats}} and greater than 0
+    </div>
+    <br>
+  <button [disabled]="InvSeats" type="submit" class="btn btn-primary" (click)="newBooking(flightNo.value, customerID.value, seats.value)">Submit</button>
+  <button type="button" class="btn btn-primary ml-3" routerLink="/flightslist">Back</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>

@@ -1,0 +1,130 @@
+ 
+  <style type="text/css">
+    body {
+       background-repeat: no-repeat;
+       background-size: cover;
+       overflow: hidden;
+    }
+  
+    .sky {
+      position: absolute;
+      top: 20%;
+      right: -500px;
+      animation: sky 7s linear 0s infinite reverse;
+      z-index: 99;
+    }
+    .bg img {
+      width: 1520px;
+      height: 700px;
+      top:20%;
+    }
+  
+    .sky img{
+      top:0;
+      width: 200px;
+    }
+  
+    @keyframes sky {
+      from {right:0px;}
+      to {right: 102%;}
+    }
+  </style>
+  
+  <body>
+  <div class="sky">
+    <img src="assets/plane.png">
+  </div>
+  <div class="bg">
+    <img src="assets/best 2.jpg">
+  </div>
+
+  <div class="bgheading">
+    <h1>Hawks Aviation</h1>
+    <h6>Your Journey is long...Choose Hawks to make it short.</h6>
+  </div>
+  <div class="bgcaption">
+    <h4>To Travel is to take a journey to Yourself</h4>
+  </div>
+  <br>
+
+  <app-carousel></app-carousel>
+  <div class="explore bg-info bg-gradient bg-opacity-25" >
+    <div class=" p-3 mb-5 ">
+        <div class="card-body">
+           <h3 class="card-title">Explore India</h3>
+           <a style="color:rgb(190, 31, 31);" routerLink="/carousel">Click for more..!</a>
+          <div class="row">
+           <div class="col-md-12" style="padding: 5px; ">
+              <marquee scrollamount="20"> 
+                <img class = "mr-2" src="assets/charminar.jpeg" height="150px" width="230px" >
+                
+               
+                  <img class = "mr-2" src="assets/taj.jpeg" height="150px" width="230px" />
+                  
+                
+                    <img class = "mr-2" src="assets/fort.jpeg" height="150px" width="230px" />
+                   
+              
+              <img class = "mr-2" src="assets/11.jpeg" height="150px" width="230px" />
+
+              <img class = "mr-2" src="assets/madurai.jfif" height="150px" width="230px" >
+              
+              <img class = "mr-2" src="assets/shimla.jfif" height="150px" width="230px" >
+              
+              <pre> <h3>   Charminar      TajMahal       Redfort       GoldenTemple      Madurai      Shimla       IshaTemple      Varanasi</h3> </pre></marquee>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class=" p-3 mb-5 ">
+          <div class="card-body">
+            <h3 class="card-title">Explore World</h3>
+            <a style="color:rgb(190, 31, 31);" routerLink="/carousel">Click for more..!</a>
+            <div class="row">
+             <div class="col-md-12" style="padding: 5px; ">
+                <marquee scrollamount="20" > 
+                  <img class = "mr-2" src="assets/africa.jpg" height="150px" width="230px" >
+                 
+                    <img class = "mr-2" src="assets/australia.png" height="150px" width="230px" />
+                  
+                      <img class = "mr-2" src="assets/USA-INNER-1.jpg" height="150px" width="230px" />
+                
+                <img class = "mr-2" src="assets/asia.jpg" height="150px" width="230px" />
+                <pre> <h3>     Africa       Australia         USA       Asia   </h3> </pre></marquee>
+              </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <marquee direction="up">
+      <font class="bg-info bg-gradient" color ="Blue"> <h3>Steps to follow for Booking a Ticket </h3>    </font>
+        <ol>
+          <h4>
+          <li>Register Yourself</li>
+          <li>Login by entering your credentials</li>
+          <li>Go to Book Flight, enter your From and To stations and Date of Journey</li>
+          <li>Choose a flight which suits for you and pay the fare amount</li>
+          <li>You will receive a email notification once the payment is successful</li>
+          <li>A Booking Id is generated through which you can checkin or cancel the flight</li>
+          <li>Once checked in you will receive confirmation status, if cancelled the data will be removed</li>
+          <li> If stuck somewhere reach our from contact us tab we are always ready to make your travel easy and fast</li>
+          
+        </h4>
+        </ol>
+ 
+        <br>
+        <br>
+      </marquee>
+        <font color="Red" align="center"> <h3>Happy Travelling with Hawks Airways</h3></font>
+      
+        <br>
+        
+
+        
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  </body>
+  

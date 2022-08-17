@@ -1,0 +1,33 @@
+.card{
+
+    border:none;
+    width:650px;
+    padding:30px;
+    background-size: cover;
+    transform:translate(40%,0%);
+    margin-top: 1cm;
+    margin-bottom: 3cm;
+    background:hsla(205,46%,30%,1);
+    opacity: 80%;
+    background:linear-gradient(90deg,hsla(205,46%,30%,1)0%,hsla(hue, saturation, lightness, alpha)(260,29%,36%,1)100%);
+}
+body
+{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h5
+{
+    color:#fff;
+}
+
+
+.card  h1,
+h6{
+    color:#fff;
+    
+}
+label{
+    color:#fff;
+}

@@ -1,0 +1,13 @@
+
+
+ul {
+  margin: 0;
+  padding: 0;
+  border: 3px solid rgb(39, 151, 78);
+}
+.navbar{
+  background-color:rgb(6, 6, 75);
+}
+a{
+  color:#fff;
+}

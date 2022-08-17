@@ -1,0 +1,28 @@
+<p>searchairport works!</p>
+
+<br>
+<br>
+<form class="form-inline">
+    <label class="my-1 mr-2" for="inlineFormInputName2">AirportID: </label>
+    <input #airportId type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Type airportId here">
+    <button (click)="searchairport(airportId.value)" type="submit" class="btn btn-primary my-1">Submit</button>
+</form>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+          <th>AirportId</th>
+          <th>Name</th>
+          <th>City</th>
+          <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{airport.airportID}}</td>
+        <td>{{airport.name}}</td>
+        <td>{{airport.city}}</td>
+        <td>{{airport.country}}</td>
+      </tr>
+    </tbody>
+  </table>

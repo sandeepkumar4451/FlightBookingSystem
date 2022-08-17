@@ -1,0 +1,28 @@
+
+.card{
+    border:none;
+    height:6cm;
+    width:10cm;
+    padding:28px;
+    transform:translate(90%,-60%);
+    background:hsla(205,46%,30%,1);
+    background:linear-gradient(90deg,rgb(30, 138, 152)0%,rgb(129, 35, 157)100%);
+    text-align: center;
+    align-items: flex-end;
+}
+
+label{
+    color:yellow;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+body
+{
+    background-color:rgba(89, 55, 136, 0.363);
+    padding:6cm;
+}
+
+button{
+    transform:translate(-100%,180%);
+}

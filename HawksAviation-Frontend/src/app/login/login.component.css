@@ -1,0 +1,36 @@
+.card{
+    border:none;
+    width:500px;
+    padding:0px 40px 20px;
+    position: absolute;
+    left:50%;
+    transform:translate(20%,-67%);
+    background:hsla(205,46%,30%,1);
+    background:linear-gradient(90deg,hsla(205,46%,30%,1)0%,hsla(260,29%,36%,1)100%);
+}
+.image
+{
+    margin-right:0.5cm;
+}
+.bol
+{
+    transform:translate(0%,-6%);
+}
+
+.card  h1,
+h5{
+    color: #fff;
+}
+
+label{
+    color:#fff;
+}
+
+body {
+    background-color: #bbdefb;
+    background-size: cover;
+  }
+
+  img{
+    transform:translate(10%,30%); 
+  }

@@ -1,0 +1,41 @@
+.footer
+{
+    position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:rgb(9, 9, 124);
+  color: white;
+  text-align: center;
+  padding-top: 5px;
+}
+a
+{
+    color:#fff;
+    text-decoration: none;
+    padding: 0px 10px;
+    font-size: 17px;
+
+}
+
+
+a:hover
+{
+    color:chocolate;
+}
+
+h2
+{
+    color:#ccb4a5;
+    text-decoration: none;
+    padding: 10px 100px;
+}
+p
+{
+    color:rgb(240, 237, 19);
+    padding: 0px 100px;
+}
+.row
+{
+    height:2cm;
+}

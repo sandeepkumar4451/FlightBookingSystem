@@ -1,0 +1,13 @@
+.mine
+{
+    transform: translate(15%,5%);
+    max-width: fit-content;
+    width:400cm;
+    margin-bottom: 10cm;
+}
+
+.row-disabled {
+    background-color: rgba(236, 240, 241, 0.5);
+    pointer-events: none;
+    width: 100%;
+ }

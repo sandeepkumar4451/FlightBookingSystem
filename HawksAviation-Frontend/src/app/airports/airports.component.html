@@ -1,0 +1,25 @@
+<nav class="navbar navbar-light bg-primary">
+  <div class="container-fluid">
+      <h1 style="color:aliceblue">Airports List</h1>
+  </div>
+</nav>
+<div class="mine">
+<table class="table table-striped">
+    <thead class="table-dark">
+      <tr>
+          <th>AirportId</th>
+          <th>Name</th>
+          <th>City</th>
+          <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dataItem of airportList">
+        <td>{{dataItem.airportID}}</td>
+        <td>{{dataItem.name}}</td>
+        <td>{{dataItem.city}}</td>
+        <td>{{dataItem.country}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

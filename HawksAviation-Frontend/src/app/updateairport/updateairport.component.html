@@ -1,0 +1,35 @@
+
+<body>
+<div class="container-fluid">
+    <form class="form-inline">
+        <label class="my-1 mr-2" for="inlineFormInputName2">AirportID: </label>
+        <input #airportId type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Type airportId here">
+        <button (click)="searchairport(airportId.value)" type="submit" class="btn btn-primary my-1">Update</button>
+    </form>
+    <br>
+    <form [formGroup]="airportForm" (ngSubmit)="updateAirport(airport.airportID)">
+        
+        <div class="form-outline mb-4">
+            <input type="text" id="airportID" class="form-control" formControlName="airportID" value={{airport.airportID}} readonly/>
+            <label class="form-label" for="airportID">AirportID</label>
+        </div>
+  
+        <div class="form-outline mb-4">
+            <input type="text" id="name" class="form-control" formControlName="name" value= {{airport.name}}/>
+            <label class="form-label" for="name">Name</label>
+        </div>  
+
+        <div class="form-outline mb-4">
+            <input type="text" id="city" class="form-control" formControlName="city" value= {{airport.city}}/>
+            <label class="form-label" for="city">City</label>
+        </div>
+  
+        <div class="form-outline mb-4">
+            <input type="email" id="country" class="form-control" formControlName="country" value = {{airport.country}}/>
+            <label class="form-label" for="country">Country</label>
+        </div>
+        
+        <button type="submit" class="btn btn-primary my-1">Submit</button>
+    </form>
+</div>
+</body>

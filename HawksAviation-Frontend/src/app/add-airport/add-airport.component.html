@@ -1,0 +1,143 @@
+<nav class="navbar navbar-light bg-primary mb-4">
+  <div class="container-fluid">
+      <h3 style="color:#fff">Add Airports</h3>
+  </div>
+</nav>
+
+<div class="container-fluid">
+    <form [formGroup]="airportForm" (ngSubmit)="AddAirport()">
+        <div class="form-outline mb-4">
+            <input type="text" id="airportId" class="form-control" formControlName="airportId"/>
+            <label class="form-label" for="airportID">AirportID</label>
+            <div *ngIf="f['airportId'].touched && f['airportId'].invalid" class="alert alert-danger">
+                <div *ngIf="f['airportId'].errors && f['airportId'].errors['required']">AirportID is required.</div>
+                <div *ngIf="f['airportId'].errors && f['airportId'].errors['minlength']">AirportID should be more than 3 character.</div>
+                <div *ngIf="f['airportId'].errors && f['airportId'].errors['maxlength']">AirportID should be less than 10 character.</div>
+              </div>
+        </div>
+  
+
+        <div class="form-outline mb-4">
+            <input type="text" id="name" class="form-control" formControlName="name"/>
+            <label class="form-label" for="name">Name</label>
+            <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+                <div *ngIf="f['name'].errors && f['name'].errors['required']">Airport Name is required.</div>
+                <div *ngIf="f['name'].errors && f['name'].errors['minlength']">Airport Name should be more than 4 character.</div>
+                <div *ngIf="f['name'].errors && f['name'].errors['maxlength']">Airport Name should be less than 20 character.</div>
+              </div>
+        </div>  
+
+        <div class="form-outline mb-4">
+            <input type="text" id="city" class="form-control" formControlName="city"/>
+            <label class="form-label" for="city">City</label>
+            <div *ngIf="f['city'].touched && f['city'].invalid" class="alert alert-danger">
+                <div *ngIf="f['city'].errors && f['city'].errors['required']">City is required.</div>
+                <div *ngIf="f['city'].errors && f['city'].errors['minlength']">City should be more than 3 character.</div>
+                <div *ngIf="f['city'].errors && f['city'].errors['maxlength']">City should be less than 10 character.</div>
+              </div>
+        </div>
+  
+
+        <div class="form-outline mb-4">
+            <input type="email" id="country" class="form-control" formControlName="country"/>
+            <label class="form-label" for="country">Country</label>
+            <div *ngIf="f['country'].touched && f['country'].invalid" class="alert alert-danger">
+                <div *ngIf="f['country'].errors && f['country'].errors['required']">Country is required.</div>
+                <div *ngIf="f['country'].errors && f['country'].errors['minlength']">Country should be more than 2 character.</div>
+                <div *ngIf="f['country'].errors && f['country'].errors['maxlength']">Country should be less than 10 character.</div>
+              </div>
+        </div>
+        
+        <button type="submit" [disabled]="airportForm.invalid" class="btn btn-primary my-1">Submit</button>
+    </form>
+</div>
+<div class="table">
+<table class="table table-striped">
+    <thead class="table-dark">
+      <tr>
+          <th>AirportId</th> 
+          <th>Name</th>
+          <th>City</th>
+          <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{airport.airportID}}</td>
+        <td>{{airport.name}}</td>
+        <td>{{airport.city}}</td>
+        <td>{{airport.country}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- <div class="container">
+  <form [formGroup]="airportForm" (ngSubmit)="AddAirport()">
+    <p>Add Airport</p>
+      <div class="form-outline mb-4">
+        <input type="text" id="airportId" class="form-control" formControlName="airportId"/>
+        <label class="form-label" for="airportID">AirportID</label>
+        <div *ngIf="f['airportId'].touched && f['airportId'].invalid" class="alert alert-danger">
+            <div *ngIf="f['airportId'].errors && f['airportId'].errors['required']">AirportID is required.</div>
+            <div *ngIf="f['airportId'].errors && f['airportId'].errors['minlength']">AirportID should be more than 3 character.</div>
+            <div *ngIf="f['airportId'].errors && f['airportId'].errors['maxlength']">AirportID should be less than 10 character.</div>
+          </div>
+      </div>
+
+
+      <div class="form-outline mb-4">
+        <input type="text" id="name" class="form-control" formControlName="name"/>
+        <label class="form-label" for="name">Name</label>
+        <div *ngIf="f['name'].touched && f['name'].invalid" class="alert alert-danger">
+            <div *ngIf="f['name'].errors && f['name'].errors['required']">Airport Name is required.</div>
+            <div *ngIf="f['name'].errors && f['name'].errors['minlength']">Airport Name should be more than 4 character.</div>
+            <div *ngIf="f['name'].errors && f['name'].errors['maxlength']">Airport Name should be less than 20 character.</div>
+          </div>
+      </div>  
+
+      <div class="form-outline mb-4">
+        <input type="text" id="city" class="form-control" formControlName="city"/>
+        <label class="form-label" for="city">City</label>
+        <div *ngIf="f['city'].touched && f['city'].invalid" class="alert alert-danger">
+            <div *ngIf="f['city'].errors && f['city'].errors['required']">City is required.</div>
+            <div *ngIf="f['city'].errors && f['city'].errors['minlength']">City should be more than 3 character.</div>
+            <div *ngIf="f['city'].errors && f['city'].errors['maxlength']">City should be less than 10 character.</div>
+          </div>
+      </div>
+
+
+      <div class="form-outline mb-4">
+        <input type="email" id="country" class="form-control" formControlName="country"/>
+        <label class="form-label" for="country">Country</label>
+        <div *ngIf="f['country'].touched && f['country'].invalid" class="alert alert-danger">
+            <div *ngIf="f['country'].errors && f['country'].errors['required']">Country is required.</div>
+            <div *ngIf="f['country'].errors && f['country'].errors['minlength']">Country should be more than 2 character.</div>
+            <div *ngIf="f['country'].errors && f['country'].errors['maxlength']">Country should be less than 10 character.</div>
+          </div>
+      </div>
+      
+      <button type="submit" [disabled]="airportForm.invalid" class="btn btn-primary my-1">Submit</button>
+  </form>
+</div>
+<div class="table">
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+        <th>AirportId</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{airport.airportID}}</td>
+      <td>{{airport.name}}</td>
+      <td>{{airport.city}}</td>
+      <td>{{airport.country}}</td>
+    </tr>
+  </tbody>
+</table>
+</div> -->
